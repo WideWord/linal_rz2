@@ -1,0 +1,160 @@
+\section{Задача 1.25}
+\subsection{Задание:}
+Найти матрицу обратную к
+$
+	A =
+	\begin{pmatrix}
+		2 & 4 & 0 & 1 \\
+		3 & -3 & 5 & 0 \\
+		-1 & 0 & 1 & 1 \\
+		2 & 1 & 1 & 0 \\
+	\end{pmatrix}
+$
+\; методом алгебраических дополненй.
+\subsection{Решение:}
+Найдём $ \det A $ чтобы убедиться что $ \exists A^{-1} $:
+\\[1em]
+$
+	\det A =
+	\begin{vmatrix}
+		2 & 4 & 0 & 1 \\
+		3 & -3 & 5 & 0 \\
+		-1 & 0 & 1 & 1 \\
+		2 & 1 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	\begin{vmatrix}
+		3 & 4 & -1 & 0 \\
+		3 & -3 & 5 & 0 \\
+		-1 & 0 & 1 & 1 \\
+		2 & 1 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	\begin{vmatrix}
+		3 & 4 & -1 & 0 \\
+		3 & -3 & 5 & 0 \\
+		-1 & 0 & 1 & 1 \\
+		2 & 1 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	-
+	\begin{vmatrix}
+		3 & 4 & -1 \\
+		3 & -3 & 5 \\
+		2 & 1 & 1 \\
+	\end{vmatrix}
+	=
+	5
+$
+\\[1em]
+$ \det A \neq 0 \Rightarrow \exists A^{-1} = \dfrac{D^T}{\det A} $
+\\[1em]
+$
+	d_{11} =
+	\begin{vmatrix}
+		-3 & 5 & 0 \\
+		0 & 1 & 1 \\
+		1 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	\begin{vmatrix}
+		-3 & 5 & 0 \\
+		0 & 1 & 1 \\
+		1 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	-
+	\begin{vmatrix}
+		-3 & 5 \\
+		1 & 1 \\
+	\end{vmatrix}
+	= 8
+\\[1em]
+	d_{12} =
+	\begin{vmatrix}
+		3 & 5 & 0 \\
+		-1 & 1 & 1 \\
+		2 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	-
+	\begin{vmatrix}
+		3 & 5 \\
+		2 & 1 \\
+	\end{vmatrix}
+	=
+	7
+\\[1em]
+	d_{13} =
+	\begin{vmatrix}
+		3 & -3 & 0 \\
+		-1 & 0 & 1 \\
+		2 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	-
+	\begin{vmatrix}
+		3 & -3 \\
+		2 & 1 \\
+	\end{vmatrix}
+	=
+	-9
+\\[1em]
+	d_{14} =
+	\begin{vmatrix}
+		3 & -3 & 5 \\
+		-1 & 0 & 1 \\
+		2 & 1 & 1 \\
+	\end{vmatrix}
+	=
+	\begin{vmatrix}
+		-3 & 5 \\
+		1 & 1 \\
+	\end{vmatrix}
+	-
+	\begin{vmatrix}
+		3 & -3 \\
+		2 & 1 \\
+	\end{vmatrix}
+	=
+	-8 - 9 = -17
+\\[1em]
+	d_{21} =
+	\begin{vmatrix}
+		4 & 0 & 1 \\
+		0 & 1 & 1 \\
+		1 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	4
+	\begin{vmatrix}
+		1 & 1 \\
+		1 & 0
+	\end{vmatrix}
+	+
+	\begin{vmatrix}
+		0 & 1 \\
+		1 & 1
+	\end{vmatrix}
+	= -4 - 1 = -5
+\\[1em]
+	d_{22} =
+	\begin{vmatrix}
+		2  & 0 & 1 \\
+		-1 & 1 & 1 \\
+		2 & 1 & 0 \\
+	\end{vmatrix}
+	=
+	2
+	\begin{vmatrix}
+		1 & 1 \\
+		1 & 0 \\
+	\end{vmatrix}
+	+
+	\begin{vmatrix}
+		-1 & 1 \\
+		2 & 1 \\
+	\end{vmatrix}
+	= -2 - 3 = -5
+\\[1em]
+$

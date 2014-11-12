@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper,twoside]{report}
+\usepackage[a4paper,outer=1cm,inner=3cm,top=2cm,bottom=1cm]{geometry}
+\usepackage{setspace}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{xcolor}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\setsansfont[Mapping=tex-text]{Helvetica}
+\renewcommand*{\familydefault}{\sfdefault}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\titleformat{\section}{\normalfont\fontsize{25}{25}\bfseries\centering}{\thesection}{1em}{}
+\newcommand{\sectionbreak}{\clearpage}
+
+\title{
+	Компьютерный праткикум по\\
+	линейной алгебре.\\
+	Расчётное задание №1\\[4em]
+	\large {
+		Тема: Матрицы и операции над ними.\\
+		Обратная матрица. Системы векторов.\\
+		Линейная зависимость и независимость.\\
+		Системы линейных уравнений. \\
+		Метод Гаусса. Ранг и база системы векторов.\\[4em]
+	}
+}
+\author{Вилков Кирилл Олегович, группа 14ПИ}
+\date{05.10.14}
+
+\makeatletter
+\def\Title{Расчётное задание №1}
+\let\theauthor\@author
+\makeatother
+
+\input{util/colontitles.tex}
+\input{util/toc.tex}
+\input{util/code.tex}
+
+\begin{document}
+
+	\maketitle
+	\pagestyle{fancy}
+	\setcounter{page}{1}
+	\tableofcontents
+	\newpage
+
+	\renewcommand*{\arraystretch}{1.5}
+
+	\input{task/1_24/doc.tex}
+	\input{task/1_25/doc.tex}
+
+\end{document}
