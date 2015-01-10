@@ -1,0 +1,19 @@
+\section{Задача 2.9}
+\subsection{Задание:}
+Доказать что всякое комплексное $ z \neq -1, |z| = 1 $ представимо в виде $ z = \dfrac{1+it}{1-it}, t \in \mathbb{R} $.
+\subsection{Решение:}
+$
+	\dfrac{1+it}{1-it}
+	=
+	\dfrac{\sqrt{1+t^2}e^{i\phi}}{\sqrt{1+t^2}e^{-i\phi}}
+	=
+	e^{2i\phi}
+$, где $ \phi = \operatorname{Arg} (1 + it) $
+\\
+Так как $ |z| = 1 $, $ z $ можно представить как $ e^{i\theta} $, приравняем: $ i\theta = 2i\phi $.
+\\
+Значит любое комплексное число $ z \neq -1, |z| = 1 $ представимо в виде $ z = \dfrac{1+it}{1-it}, t \in \mathbb{R} $.
+\subsection{Выполним проверку в компьютерной среде Wolfram Mathematica:}
+\includegraphics[scale=0.6]{task/2_09/screen.png}
+\subsection{Вывод:}
+Утверждение доказано и прошло проверку в компьютерной среде.
