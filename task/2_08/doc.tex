@@ -47,5 +47,28 @@ $
 	=
 	\operatorname{Re} u_j - i \operatorname{Im} u_j
 	=
-	\operatorname{Re} u_{j-1} \cdot \operatorname{Re} z_j - i(\operatorname{Im} u_(j-1) \cdot \operatorname{Im} z_j)
+	\operatorname{Re} u_{j-1} \cdot \operatorname{Re} z_j - i(\operatorname{Im} u_{j-1} \cdot \operatorname{Im} z_j)
+	=
+	\operatorname{Re} u_{j-1} \cdot \operatorname{Re} z_j +
+	i(\operatorname{Im} \overline{u_{j-1}} \cdot \operatorname{Im} \overline{z_j})
+	=
+	\overline{u_{j-1}} \cdot \overline{z_j}
 $
+\subsection{Деление:}
+$
+	\overline{u_j}
+	=
+	\operatorname{Re} \overline{u_j} + i \operatorname{Im} \overline{u_j}
+	=
+	\operatorname{Re} u_j - i \operatorname{Im} u_j
+	=
+	\overline{u_{j-1}} / \overline{z_j}
+$
+\\[2em]
+Таким образом в результате тех же операций над $ \overline{z_1}, \dots, \overline{z_n} $ получается $ \overline{u} $.
+\subsection{Компьютерная проверка в среде Wolfram Mathematica:}
+\includegraphics[scale=0.6]{task/2_08/screen1.png}
+\\
+\includegraphics[scale=0.6]{task/2_08/screen2.png}
+\subsection{Вывод:}
+Утверждение доказано.
